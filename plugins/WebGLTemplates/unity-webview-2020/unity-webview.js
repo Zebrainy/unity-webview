@@ -45,6 +45,7 @@ var unityWebView =
 
                 unityInstance.SendMessage(name, "CallOnLoaded", location.href);
             });
+        unityInstance.SendMessage(name, "CallOnInited", "");
     },
 
     sendMessage: function (name, message) {
