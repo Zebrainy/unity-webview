@@ -232,6 +232,8 @@ window.Unity = { \
         [window setDelegate:self];
         windowController = [[NSWindowController alloc] initWithWindow:window];
     }
+    
+    [self addMessage:@"CallOnInited:"];
     return self;
 }
 
@@ -999,6 +1001,7 @@ void *_CWebViewPlugin_Init(
 {
     CWebViewPlugin *webViewPlugin = [[CWebViewPlugin alloc] initWithGameObject:gameObject transparent:transparent zoom:zoom width:width height:height ua:ua separated:separated];
     [_instances addObject:webViewPlugin];
+
     return (__bridge_retained void *)webViewPlugin;
 }
 
