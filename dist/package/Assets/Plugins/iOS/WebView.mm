@@ -172,6 +172,7 @@ window.Unity = { \
     saveDataURL: function(fileName, dataURL) { \
         window.webkit.messageHandlers.saveDataURL.postMessage(fileName + '\t' + dataURL); \
     } \
+    , ...window.Unity \
 }; \
 ";
         if (!zoom) {

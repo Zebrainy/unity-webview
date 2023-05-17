@@ -178,6 +178,7 @@ window.Unity = { \
     call: function(msg) { \
         window.webkit.messageHandlers.unityControl.postMessage(msg); \
     } \
+    , ...window.Unity \
 }; \
 ";
     if (!zoom) {
