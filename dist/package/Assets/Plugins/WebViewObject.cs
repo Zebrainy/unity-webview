@@ -1426,6 +1426,7 @@ public class WebViewObject : MonoBehaviour
             if (webView == IntPtr.Zero)
                 break;
             string s = _CWebViewPlugin_GetMessage(webView);
+            Debug.Log($"[WebViewObject.Update] msg: {s}");
             if (s == null)
                 break;
             var i = s.IndexOf(':', 0);
